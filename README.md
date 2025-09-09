@@ -5,8 +5,9 @@
 
   <details>
     <summary>Colima on MacOS</summary>
-    - In order to avoid running Docker Desktop we've used Colima.  It can be installed with Homebrew.
-    brew install docker-compose
+    - In order to avoid running Docker Desktop we've used Colima.  It can be installed with [Homebrew](https://brew.sh/).
+    
+    ```brew install docker-compose```
 
     - The colima VM needs to be started with
 

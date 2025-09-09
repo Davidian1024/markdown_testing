@@ -15,6 +15,7 @@ It can be installed with [Homebrew](https://brew.sh/).
 Docker and Docker Compose should also be installed via Homebrew.
 
 <code>brew install docker</code>
+
 <code>brew install docker-compose</code>
 
 The colima VM needs to be started with

@@ -47,13 +47,7 @@ We've found this to be nessesary, as bringing up the containers with docker-comp
 
 ### Docker Engine on Linux
 
-<details>
-
-<summary></summary>
-
-We recommend installing Docker with the instructions at [Install Docker Engine](https://docs.docker.com/engine/install/)
-
-</details>
+We recommend installing Docker with the instructions located here: [Install Docker Engine](https://docs.docker.com/engine/install/)
 
 </details>
 

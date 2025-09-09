@@ -2,15 +2,15 @@
 
 <details>
 
-<summary></summary>
-
 ## System Specific Notes
+
+<summary></summary>
 
 <details>
 
-<summary></summary>
-
 ### MacOS without Docker Desktop (entirely command line)
+
+<summary></summary>
 
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).
 
@@ -47,9 +47,9 @@ We've found this to be nessesary, as bringing up the containers with docker-comp
 
 <details>
 
-<summary></summary>
-
 ### Docker Engine on Linux
+
+<summary></summary>
 
 We recommend installing Docker with the instructions at [Install Docker Engine](https://docs.docker.com/engine/install/)
 

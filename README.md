@@ -1,6 +1,6 @@
 # the-sound-mind
 
-## System Specific Notes
+## Local Development Environment Specific Notes
 
 <details>
 

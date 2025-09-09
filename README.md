@@ -12,8 +12,9 @@ If you want to run Docker entirely from the command line we recommend using [Col
 
 It can be installed with [Homebrew](https://brew.sh/).
 
-Docker should also be installed via Homebrew.
+Docker and Docker Compose should also be installed via Homebrew.
 
+<code>brew install docker</code>
 <code>brew install docker-compose</code>
 
 The colima VM needs to be started with

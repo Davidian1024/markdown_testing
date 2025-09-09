@@ -4,7 +4,8 @@
 <summary>System Specific Notes</summary>
 <details>
 <summary>Colima on MacOS</summary>
-If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).  It can be installed with [Homebrew](https://brew.sh/).
+If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).
+It can be installed with [Homebrew](https://brew.sh/).
 <code>brew install docker-compose</code>
 The colima VM needs to be started with
 <code>colima start virtio --mount-type=virtiofs</code>

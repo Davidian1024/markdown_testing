@@ -6,19 +6,19 @@
 <summary>Colima on MacOS</summary>
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).
 It can be installed with [Homebrew](https://brew.sh/).
-<code>brew install docker-compose</code>
+`brew install docker-compose`
 The colima VM needs to be started with
-<code>colima start virtio --mount-type=virtiofs</code>
+`colima start virtio --mount-type=virtiofs`
 Something similar to this
 The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
-<code>
+```
 {
         "currentContext": "colima-virtio",
         "cliPluginsExtraDirs": [
                 "/opt/homebrew/lib/docker/cli-plugins"
         ]
 ]
-</code>
+```
 may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
 <code>docker compose up  # without the dash (Docker executing compose as a plugin)</code>
 as opposed to commands like

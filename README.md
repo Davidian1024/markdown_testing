@@ -38,9 +38,9 @@
   </details>
 
   <details>
-  <summary>Docker Engine on Linux</summary>
-  We recommend installing Docker with the instructions at 
-  [Install Docker Engine](https://docs.docker.com/engine/install/)
+    <summary>Docker Engine on Linux</summary>
+    We recommend installing Docker with the instructions at 
+    [Install Docker Engine](https://docs.docker.com/engine/install/)
   </details>
 
 </details>

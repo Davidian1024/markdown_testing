@@ -1,9 +1,9 @@
 # the-sound-mind
 
 <details>
-<summary>System Specific Notes</summary>
+<summary>## System Specific Notes</summary>
 <details>
-<summary>MacOS without Docker Desktop (entirely command line)</summary>
+<summary>### MacOS without Docker Desktop (entirely command line)</summary>
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).
 
 
@@ -28,7 +28,7 @@ as opposed to commands like
 We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
 </details>
 <details>
-<summary>Docker Engine on Linux</summary>
+<summary>### Docker Engine on Linux</summary>
 We recommend installing Docker with the instructions at 
 [Install Docker Engine](https://docs.docker.com/engine/install/)
 </details>

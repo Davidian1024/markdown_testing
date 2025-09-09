@@ -18,7 +18,7 @@ Docker and Docker Compose should also be installed via Homebrew.
 
 <code>brew install docker-compose</code>
 
-The colima VM needs to be started with the virtiofs mount type in order to avoid a mismatch between filesystem ownership/permissions when the postgresql data is mounted from a host directory (on the macOS filesystem) into the container.
+The colima VM needs to be started with the virtiofs mount type in order to avoid a mismatch between filesystem ownership/permissions when the postgresql data volume is mounted from a host directory (on the macOS filesystem) into the container.
 
 <code>colima start virtio --mount-type=virtiofs</code>
 

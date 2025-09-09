@@ -3,7 +3,7 @@
 <details>
 <summary>System Specific Notes</summary>
 <details>
-<summary>Colima on MacOS</summary>
+<summary>MacOS without Docker Desktop (entirely command line)</summary>
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).<br>
 It can be installed with [Homebrew](https://brew.sh/).
 <code>brew install docker-compose`</code>

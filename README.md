@@ -8,10 +8,6 @@
 
 ### MacOS without Docker Desktop (entirely command line)
 
-<details>
-
-<summary></summary>
-
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).
 
 It can be installed with [Homebrew](https://brew.sh/).
@@ -42,8 +38,6 @@ as opposed to commands like
 <code>docker-compose up  # with the dash (directly running the docker-compose binary)</code>
 
 We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
-
-</details>
 
 ### Docker Engine on Linux
 

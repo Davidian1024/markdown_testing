@@ -24,7 +24,8 @@ The colima VM needs to be started with the virtiofs mount type in order to avoid
 
 The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
 
-```{
+```
+   {
      "currentContext": "colima-virtio",
      "cliPluginsExtraDirs": [
        "/opt/homebrew/lib/docker/cli-plugins"

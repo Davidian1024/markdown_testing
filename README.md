@@ -1,14 +1,14 @@
 # the-sound-mind
 
-<details>
-
 ## System Specific Notes
+
+<details>
 
 <summary></summary>
 
-<details>
-
 ### MacOS without Docker Desktop (entirely command line)
+
+<details>
 
 <summary></summary>
 
@@ -45,9 +45,9 @@ We've found this to be nessesary, as bringing up the containers with docker-comp
 
 </details>
 
-<details>
-
 ### Docker Engine on Linux
+
+<details>
 
 <summary></summary>
 

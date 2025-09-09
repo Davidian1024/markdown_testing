@@ -1,45 +1,45 @@
 # the-sound-mind
 
 <details>
-  <summary>System Specific Notes</summary>
+<summary>System Specific Notes</summary>
 
-  <details>
-    <summary>Colima on MacOS</summary>
-    In order to avoid running Docker Desktop we've used Colima.  It can be installed with [Homebrew](https://brew.sh/).
-    
-    brew install docker-compose
+<details>
+<summary>Colima on MacOS</summary>
+In order to avoid running Docker Desktop we've used Colima.  It can be installed with [Homebrew](https://brew.sh/).
 
-    The colima VM needs to be started with
+brew install docker-compose
 
-    colima start virtio --mount-type=virtiofs
+The colima VM needs to be started with
 
-    Something similar to this
-    
-    {
-            "currentContext": "colima-virtio",
-            "cliPluginsExtraDirs": [
-                    "/opt/homebrew/lib/docker/cli-plugins"
-            ]
-    ]
-    
-    may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
+colima start virtio --mount-type=virtiofs
 
-    docker compose up  # without the dash (Docker executing compose as a plugin)
+Something similar to this
 
-    as opposed to commands like
+{
+        "currentContext": "colima-virtio",
+        "cliPluginsExtraDirs": [
+                "/opt/homebrew/lib/docker/cli-plugins"
+        ]
+]
 
-    docker-compose up  # with the dash (directly running the docker-compose binary)
+may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
 
-    We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
+docker compose up  # without the dash (Docker executing compose as a plugin)
 
-    The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
-  </details>
+as opposed to commands like
 
-  <details>
-    <summary>Docker Engine on Linux</summary>
-    We recommend installing Docker with the instructions at 
-    [Install Docker Engine](https://docs.docker.com/engine/install/)
-  </details>
+docker-compose up  # with the dash (directly running the docker-compose binary)
+
+We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
+
+The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
+</details>
+
+<details>
+<summary>Docker Engine on Linux</summary>
+We recommend installing Docker with the instructions at 
+[Install Docker Engine](https://docs.docker.com/engine/install/)
+</details>
 
 </details>
 

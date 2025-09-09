@@ -22,7 +22,7 @@ The colima VM needs to be started with the virtiofs mount type in order to avoid
 
 <code>colima start virtio --mount-type=virtiofs</code>
 
-The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
+The following may need to be added to your `~/.docker/config.json` in order to allow docker to find the docker-compose plugin.
 
 ```
    {
@@ -33,15 +33,15 @@ The following may need to be added to your `~/.docker/config.json` in order to a
    }
 ```
 
-may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
+This may need to be nessesary to allow docker compose commands (without the dash) to work.
 
 <code>docker compose up  # without the dash (Docker executing compose as a plugin)</code>
 
-as opposed to commands like
+As opposed to docker-compose commands.
 
 <code>docker-compose up  # with the dash (directly running the docker-compose binary)</code>
 
-We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
+We've found this to be nessesary, as bringing up the containers with `docker-compose` instead of `docker compose` has resulted in connectivity issues between containers.
 
 ### Docker Engine on Linux
 

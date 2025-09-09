@@ -13,24 +13,24 @@
 
     - The colima VM needs to be started with
 
-    ```colima start virtio --mount-type=virtiofs```
+    colima start virtio --mount-type=virtiofs
 
     - Something similar to this
     
-    ```{
+    {
             "currentContext": "colima-virtio",
             "cliPluginsExtraDirs": [
                     "/opt/homebrew/lib/docker/cli-plugins"
             ]
-    ]```
+    ]
     
     may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
 
-    ```docker compose up  # without the dash (Docker executing compose as a plugin)```
+    docker compose up  # without the dash (Docker executing compose as a plugin)
 
     as opposed to commands like
 
-    ```docker-compose up  # with the dash (directly running the docker-compose binary)```
+    docker-compose up  # with the dash (directly running the docker-compose binary)
 
     We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
 

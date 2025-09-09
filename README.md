@@ -7,28 +7,30 @@
 <summary>Colima on MacOS</summary>
 In order to avoid running Docker Desktop we've used Colima.  It can be installed with [Homebrew](https://brew.sh/).
 
-brew install docker-compose
+<code>brew install docker-compose</code>
 
 The colima VM needs to be started with
 
-colima start virtio --mount-type=virtiofs
+<code>colima start virtio --mount-type=virtiofs</code>
 
 Something similar to this
 
+<code>
 {
         "currentContext": "colima-virtio",
         "cliPluginsExtraDirs": [
                 "/opt/homebrew/lib/docker/cli-plugins"
         ]
 ]
+</code>
 
 may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
 
-docker compose up  # without the dash (Docker executing compose as a plugin)
+<code>docker compose up  # without the dash (Docker executing compose as a plugin)</code>
 
 as opposed to commands like
 
-docker-compose up  # with the dash (directly running the docker-compose binary)
+<code>docker-compose up  # with the dash (directly running the docker-compose binary)</code>
 
 We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
 

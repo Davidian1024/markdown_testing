@@ -8,7 +8,7 @@ If you want to run Docker entirely from the command line we recommend using [Col
 
 It can be installed with [Homebrew](https://brew.sh/).
 
-<code>brew install docker-compose`</code>
+<code>brew install docker-compose</code>
 The colima VM needs to be started with
 <code>colima start virtio --mount-type=virtiofs</code>
 Something similar to this

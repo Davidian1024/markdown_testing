@@ -6,6 +6,8 @@
 
 <summary></summary>
 
+The instructions on running the app expect Docker Desktop to be installed.  Running entirely on the command line is possible with some additional effort.
+
 ### MacOS without Docker Desktop (entirely command line)
 
 If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).

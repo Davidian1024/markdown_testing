@@ -2,19 +2,14 @@
 
 <details>
 <summary>System Specific Notes</summary>
-
 <details>
 <summary>Colima on MacOS</summary>
-In order to avoid running Docker Desktop we've used Colima.  It can be installed with [Homebrew](https://brew.sh/).
-
+If you want to run Docker entirely from the command line we recommend using [Colima](https://github.com/abiosoft/colima).  It can be installed with [Homebrew](https://brew.sh/).
 <code>brew install docker-compose</code>
-
 The colima VM needs to be started with
-
 <code>colima start virtio --mount-type=virtiofs</code>
-
 Something similar to this
-
+The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
 <code>
 {
         "currentContext": "colima-virtio",
@@ -23,26 +18,17 @@ Something similar to this
         ]
 ]
 </code>
-
 may need to be added to your Docker config.  This allows Docker to find the docker-compose plugin which will allow commands like
-
 <code>docker compose up  # without the dash (Docker executing compose as a plugin)</code>
-
 as opposed to commands like
-
 <code>docker-compose up  # with the dash (directly running the docker-compose binary)</code>
-
 We've found this to be nessesary, as bringing up the containers with docker-compose instead of docker compose will result in connectivity issues between containers.
-
-The following may need to be added to your `~/.docker/config.json` in order to avoid permissions issues with certain volumes.
 </details>
-
 <details>
 <summary>Docker Engine on Linux</summary>
 We recommend installing Docker with the instructions at 
 [Install Docker Engine](https://docs.docker.com/engine/install/)
 </details>
-
 </details>
 
 ## Running the app

@@ -11,6 +11,5 @@ Clone this repository.
 Install Rust by following the instructions at https://rustup.rs/
 
 Add the wasm32-unknown-unknown Rust compilation target for browser-based WebAssembly.
+
 ```rustup target add wasm32-unknown-unknown```
-
-

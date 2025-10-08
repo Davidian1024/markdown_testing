@@ -24,12 +24,16 @@ cargo install --locked trunk
 ```
 
 5. Run Project
+   
+While running the site under `trunk serve` any time changes are saved to the source files, trunk will rebuild the site and refresh the browser.  This allows for real-time updating of the site.
 
 ```
 trunk serve
 ```
 
 ## Generate a Static Site
+
+This will produce a fully built version of the site in the dist directory.  It can then be served separately with something like `python3 -m http.server --directory dist`.
 
 ```
 trunk build --release

@@ -1,30 +1,7 @@
-# fctc-website-yew
+### Generating a standalone HTML file
 
-This is a quick and dirty remake of the FCTC website.  Primarily written in Rust using the Yew framework.
-
-## Running Locally
-
-1. Clone this repository.
-
-2. Install Rust by following the instructions at https://rustup.rs/
-
-3. Add the wasm32-unknown-unknown Rust compilation target for browser-based WebAssembly.
+The w4 tool provided by the WASM-4 project has a bundle feature that allows you to generate a standalone HTML file that fully contains the game.  This can then be embedded into another web page using something like an iframe.  The bundle feature supports the Mustache HTML template language.
 
 ```
-rustup target add wasm32-unknown-unknown
-```
-
-4. Install Trunk
-
-```
-# note that this might take a while to install because it compiles everything from scratch
-# Trunk also provides prebuilt binaries for a number of major package managers
-# See https://trunkrs.dev/#install for further details
-cargo install --locked trunk
-```
-
-5. Run Project
-
-```
-trunk serve
+w4 bundle target/wasm32-unknown-unknown/release/cart.wasm --title "not-pong" --html not-pong.html --html-template template.html.mustache
 ```

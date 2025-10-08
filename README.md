@@ -24,3 +24,9 @@ Install Trunk
 # See https://trunkrs.dev/#install for further details
 cargo install --locked trunk
 ```
+
+Run Project
+
+```
+trunk serve
+```

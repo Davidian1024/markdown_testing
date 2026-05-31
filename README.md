@@ -128,13 +128,7 @@ libretro callback, struct field, and constant.
 
 This project was developed collaboratively with [Claude Sonnet 4.6](https://www.anthropic.com/claude)
 (Anthropic). The libretro glue layer, inline documentation, and README were all written
-through an iterative back-and-forth conversation. The hard-won lessons section in
-particular reflects real mistakes encountered and debugged during that process —
-wrong pixel format constants, missing mandatory exports, segfaults on load — rather
-than being written from prior knowledge.
-
-The source code and documentation are the author's own work; Claude served as a
-knowledgeable pair programmer throughout.
+through an iterative back-and-forth conversation.
 
 ## License
 

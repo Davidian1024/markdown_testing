@@ -73,35 +73,6 @@ in the order RetroArch calls them during startup:
 If RetroArch fails to load your core, check its log file for `Failed to load symbol:`
 messages — that is how you find out which exports are missing.
 
-## Hard-won lessons
-
-**Set the pixel format explicitly.** If you do not call
-`RETRO_ENVIRONMENT_SET_PIXEL_FORMAT` with `RETRO_PIXEL_FORMAT_XRGB8888` (value `1`),
-RetroArch assumes the legacy `XRGB1555` format and your framebuffer colors will be
-completely wrong. The correct constant values are:
-
-| Constant | Value |
-|---|---|
-| `RETRO_PIXEL_FORMAT_0RGB1555` | `0` (legacy default) |
-| `RETRO_PIXEL_FORMAT_XRGB8888` | `1` |
-| `RETRO_PIXEL_FORMAT_RGB565` | `2` |
-
-**Set the pixel format in `retro_set_environment`, not `retro_init`.** In some RetroArch
-versions `retro_set_environment` is called after `retro_init`, which means the environment
-callback is not yet available when `retro_init` runs. Setting the pixel format in
-`retro_set_environment` ensures it is always applied.
-
-**Pitch is bytes per row, not pixels per row.** The pitch argument to the video refresh
-callback is the number of bytes between the start of one row and the start of the next.
-For a packed XRGB8888 buffer this is `width * 4`.
-
-**`retro_load_game_special` and `retro_reset` are required.** They are not in some
-versions of the libretro documentation but RetroArch will refuse to load your core without
-them.
-
-**Use `#[unsafe(no_mangle)]` not `#[no_mangle]`.** As of Rust 1.82, `#[no_mangle]`
-requires an explicit `unsafe` acknowledgment. Use `#[unsafe(no_mangle)]` on all exports.
-
 ## Deploying to RetroArch on Steam (Linux)
 
 Build the core:
@@ -152,6 +123,18 @@ cargo doc --open
 
 All public items are documented. The generated docs include full descriptions of every
 libretro callback, struct field, and constant.
+
+## Development notes
+
+This project was developed collaboratively with [Claude Sonnet 4.6](https://www.anthropic.com/claude)
+(Anthropic). The libretro glue layer, inline documentation, and README were all written
+through an iterative back-and-forth conversation. The hard-won lessons section in
+particular reflects real mistakes encountered and debugged during that process —
+wrong pixel format constants, missing mandatory exports, segfaults on load — rather
+than being written from prior knowledge.
+
+The source code and documentation are the author's own work; Claude served as a
+knowledgeable pair programmer throughout.
 
 ## License
 

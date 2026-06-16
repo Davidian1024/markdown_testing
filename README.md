@@ -1,4 +1,4 @@
-## devops update 2026-06-16
+## DevOps update 2026-06-16
 
 ### gatherwellch.org
 - RCA created for downtime during cutover from wix dns to squarespace dns / migration to cloudflare
